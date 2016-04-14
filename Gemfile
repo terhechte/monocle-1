@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.3'
 
 gem 'sinatra', :require => 'sinatra/base'
 gem 'unicorn'
@@ -29,7 +29,6 @@ gem 'dotenv'
 
 group :development do
   gem 'thin'
-  gem 'debugger'
 end
 
 # DB
