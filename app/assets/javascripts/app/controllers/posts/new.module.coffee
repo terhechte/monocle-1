@@ -19,6 +19,7 @@ class NewPost extends Overlay
 
   render: =>
     @html(@view('posts/new')(this))
+    @$('#fetching-title').hide()
     @$form  = @$('form')
     @$url   = @$('input[name=url]')
     @$title = @$('input[name=title]')
@@ -57,7 +58,12 @@ class NewPost extends Overlay
     val = @$url.val()
     return unless val
 
+    @$('#fetching-title').show()
+    @$('#submission-guidelines').hide()
+
     Post.suggestTitle(val).success (suggest) =>
+      @$('#fetching-title').hide()
+      return if suggest.title == null
       return if @$title.val()
       @$title.val(suggest.title).select()
 

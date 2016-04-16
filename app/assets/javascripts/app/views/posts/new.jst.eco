@@ -7,7 +7,9 @@
     <input type="url" name="url" placeholder="URL" required autofocus>
     <input type="text" name="title" placeholder="Title" required>
 
-    <p>Posts are lonely without comments &ndash; why not start the discussion?</p>
+    <span id="submission-guidelines">Post a swifty link. Interesting GitHub projects, blog posts, or tutorials. <a href="/submission-guidelines" target="_blank">Consult the submission guidelines for more information</a>.</span>
+
+    <span id="fetching-title">Attempting to fetch title</span>
   </article>
 
   <footer>

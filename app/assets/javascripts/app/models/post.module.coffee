@@ -67,7 +67,7 @@ class Post extends Model
     # successful, as there may be no network
     request = @popular.refresh()
     request.error =>
-      setTimeout(@refresh, 80000)
+      setTimeout(@refresh, 4000)
     request.success =>
       @newest.refresh()
 

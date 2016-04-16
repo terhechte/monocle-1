@@ -44,9 +44,10 @@ module Brisk
 
       get '/v1/posts/suggest_title' do
         begin
-          document = Nestful.get(params[:url], {}, timeout: 4).body
+          document = Nestful.get(params[:url], {}, timeout: 2).body
         rescue Nestful::TimeoutError, URI::InvalidURIError
-          error 406
+          # Return an empty title
+          json(title: nil)
         end
 
         title = Parsers::OpenGraph.parse(document)[:title]
