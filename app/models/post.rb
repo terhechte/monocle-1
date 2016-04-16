@@ -198,7 +198,8 @@ module Brisk
           comments_count: comments_count,
           user_id:        user_id,
           user_handle:    user_handle,
-          created_at:     published_at || created_at
+          created_at:     published_at || created_at,
+          flagged:        flagged
         }
       end
 

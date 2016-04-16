@@ -19,6 +19,7 @@ class Posts extends Controller
     @$el.activeArea()
     @on 'click', 'a[data-user-id]', @clickUser
     @on 'click', 'a[data-delete-post]', @deletePost
+    @on 'click', 'a[data-flag-post]', @flagPost
 
     State.observeKey 'post', =>
       @render(State.get('post'))
@@ -27,12 +28,17 @@ class Posts extends Controller
     e.preventDefault()
     
     postID = $(e.currentTarget).data('delete-post')
-    console.log postID
     return unless postID
 
-    #post   = Post.find(postID)
     Post.delete(postID)
 
+  flagPost: (e) =>
+    e.preventDefault()
+    
+    postID = $(e.currentTarget).data('flag-post')
+    return unless postID
+
+    Post.flag(postID)
 
   render: (@post) =>
     @$el.empty()

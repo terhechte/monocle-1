@@ -171,6 +171,12 @@ module Brisk
         "done"
       end
 
+      post '/v1/posts/flag/:id', :auth => true do
+        post = Post.first!(id: params[:id])
+        post.flagged += 1
+        post.save
+      end
+
       get '/feed' do
         @posts = Post.published.limit(50)
         builder :feed

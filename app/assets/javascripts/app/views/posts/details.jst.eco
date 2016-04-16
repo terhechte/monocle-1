@@ -36,6 +36,14 @@
       </a>
     <% end %>
 
+      <a data-flag-post="<%= @post.get('id') %>">
+        Flag Post
+      </a>
+
+      <% if @post.get('flagged') > 0: %>
+      (Flagged)
+      <% end %>
+
   </div>
 
   <% if @post.get('summary'): %>

@@ -49,6 +49,16 @@ class Post extends Model
           alert("Could not delete the post: " + data)
         document.location.href = "/"
 
+  @flag: (postid) ->
+    alert("Thanks for flagging. We will look into it")
+    $.ajax
+      type:  'POST'
+      url:   @uri('flag', postid)
+      queue: true
+      warn:  true
+      success: (data, textStatus, xhr) ->
+        console.log "Flagged"
+
   @suggestTitle: (url) ->
     $.getJSON(@uri('suggest_title'), url: url)
 

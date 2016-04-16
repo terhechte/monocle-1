@@ -28,6 +28,7 @@ Sequel.migration do
       column :activated_at, "timestamp without time zone"
       column :secret, "text"
       column :manifesto, "boolean", :default=>false
+      column :flagged, "integer", :default=>0
 
       primary_key [:id]
 
@@ -62,6 +63,7 @@ Sequel.migration do
       column :user_handle, "text"
       column :voted_user_ids, "uuid[]", :default=>Sequel::LiteralString.new("'{}'::uuid[]")
       column :preview_url, "text"
+      column :flagged, "integer", :default=>0
 
       primary_key [:id]
 
@@ -99,6 +101,7 @@ Sequel.migration do
       column :score, "double precision", :default=>0.0
       column :created_at, "timestamp without time zone"
       column :updated_at, "timestamp without time zone"
+      column :flagged, "integer", :default=>0
       foreign_key :parent_id, :comments, :type=>"uuid", :key=>[:id]
 
       primary_key [:id]
