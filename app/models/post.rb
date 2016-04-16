@@ -143,7 +143,11 @@ module Brisk
       def retrieve!
         document         = Nestful.get(url).body
         document         = document.force_encoding(Encoding::UTF_8)
-        self.oembed      = Parsers::OEmbed.parse(document) || {}
+        self.oembed = {}
+        begin
+          self.oembed = Parsers::OEmbed.parse(document) || {}
+        rescue Exception
+        end
         self.body        = Parsers::Readability.parse(document) || ''
         self.summary     = Parsers::Summary.parse(self.body)
         self.preview_url = Parsers::Preview.parse(self.body)
