@@ -35,7 +35,11 @@ module Brisk
       end
 
       get '/v1/posts/slug/:slug' do
-        json Post.first!(slug: params[:slug])
+        begin
+          json Post.first!(slug: params[:slug])
+        rescue Exception
+          return json Post.newest()[0]
+        end
       end
 
       get '/v1/posts/suggest_title' do
@@ -78,7 +82,12 @@ module Brisk
         post.user   = current_user
         post.notify = true
 
-        post.save!
+        begin
+          post.save!
+        rescue Exception
+          return json("Invalid URL")
+        end
+
         post.vote!(post.user)
 
         begin
