@@ -3,10 +3,9 @@
 </header>
 <form>
   <article>
-    <input type="email" placeholder="Email (optional)" value="<%= @user?.get('email') %>" autofocus>
-    <textarea required></textarea>
+      Contact me on twitter as <a href="https://twitter.com/terhechte">@terhechte</a>
   </article>
   <footer>
-    <button type="submit" class="btn">Send Feedback</button>
+    <button type="submit" class="btn">Close</button>
   </footer>
 </form>

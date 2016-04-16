@@ -10,7 +10,7 @@ class Feedback extends Overlay
   constructor: ->
     super
     @user = State.get('user')
-    @on 'submit', @submit
+    @on 'submit', @close
     @render()
 
   render: =>
