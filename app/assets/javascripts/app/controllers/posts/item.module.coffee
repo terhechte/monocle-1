@@ -20,6 +20,7 @@ class PostItem extends Controller
     @on('click', '.vote', @clickVote)
     @on('click', '.domain', @clickDomain)
     @on('click', 'a[data-user-id]', @clickUser)
+    @on('click', 'a[data-delete-post]', @deletePost)
 
     @render()
 

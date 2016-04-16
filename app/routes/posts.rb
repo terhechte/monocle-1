@@ -136,6 +136,27 @@ module Brisk
         erb :post_body
       end
 
+      get '/v1/posts/delete/:id' do
+        post = Post.first!(id: params[:id])
+        puts "id", post
+        # remove all comments
+        comments = post.comments_dataset
+        comments.each { |k|
+          k.comment_votes.each { |v|
+            v.destroy
+          }
+          k.destroy
+        }
+        post.post_votes_dataset.each { |k|
+          k.destroy
+        }
+        post.post_visits_dataset.each { |k|
+          k.destroy
+        }
+        post.delete
+        json "done"
+      end
+
       get '/feed' do
         @posts = Post.published.limit(50)
         builder :feed

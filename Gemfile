@@ -26,6 +26,7 @@ gem 'sanitize'
 gem 'redis'
 gem 'gibbon', :git => 'https://github.com/amro/gibbon.git'
 gem 'dotenv'
+gem 'addressable'
 
 group :development do
   gem 'thin'

@@ -38,6 +38,12 @@ class Post extends Model
     record.set(slug: slug)
     record
 
+  @delete: (postid) ->
+    request = => $.getJSON(@uri('delete', postid))
+    request()
+    document.location.href = document.location.href
+
+
   @suggestTitle: (url) ->
     $.getJSON(@uri('suggest_title'), url: url)
 
@@ -46,7 +52,7 @@ class Post extends Model
     # successful, as there may be no network
     request = @popular.refresh()
     request.error =>
-      setTimeout(@refresh, 4000)
+      setTimeout(@refresh, 80000)
     request.success =>
       @newest.refresh()
 

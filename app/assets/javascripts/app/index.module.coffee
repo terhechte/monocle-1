@@ -6,7 +6,7 @@ Sidebar         = require('app/controllers/sidebar')
 Posts           = require('app/controllers/posts')
 Post            = require('app/models/post')
 User            = require('app/models/user')
-Stream          = require('app/models/stream')
+#Stream          = require('app/models/stream')
 Invite          = require('app/models/invite')
 State           = require('app/state')
 Router          = require('app/router')
@@ -36,7 +36,7 @@ class App extends Controller
     # Add key bindings
     @keyBinding = new KeyBinding
 
-    $(window).on('load',   => Stream.open())
+    #$(window).on('load',   => Stream.open())
     $(window).on('online', => Post.refresh())
     $(document).on('wake', => Post.refresh())
 

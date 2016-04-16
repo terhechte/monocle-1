@@ -15,6 +15,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.4.0)
     bcrypt-ruby (3.1.1)
     builder (3.2.2)
     cft-source (0.0.6)
@@ -147,6 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (~> 4.1.1)
+  addressable
   bcrypt-ruby
   builder
   cft-source (>= 0.0.6)

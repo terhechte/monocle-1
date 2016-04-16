@@ -29,6 +29,13 @@
         <%= @post.get('user_handle') %>
       </a>
     </span>
+
+    <% if @post.get('created') == true: %>
+      <a data-delete-post="<%= @post.get('id') %>">
+        Delete Post
+      </a>
+    <% end %>
+
   </div>
 
   <% if @post.get('summary'): %>
