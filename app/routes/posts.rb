@@ -145,9 +145,14 @@ module Brisk
         erb :post_body
       end
 
-      get '/v1/posts/delete/:id' do
+      post '/v1/posts/delete/:id', :auth => true do
         post = Post.first!(id: params[:id])
-        puts "id", post
+
+        # make sure we're the owning user
+        if current_user.id != post.user_id
+          return "Invalid user"
+        end
+
         # remove all comments
         comments = post.comments_dataset
         comments.each { |k|
@@ -163,7 +168,7 @@ module Brisk
           k.destroy
         }
         post.delete
-        json "done"
+        "done"
       end
 
       get '/feed' do

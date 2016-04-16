@@ -39,10 +39,15 @@ class Post extends Model
     record
 
   @delete: (postid) ->
-    request = => $.getJSON(@uri('delete', postid))
-    request()
-    document.location.href = document.location.href
-
+    $.ajax
+      type:  'POST'
+      url:   @uri('delete', postid)
+      queue: true
+      warn:  true
+      success: (data, textStatus, xhr) ->
+        if data != "done"
+          alert("Could not delete the post: " + data)
+        document.location.href = "/"
 
   @suggestTitle: (url) ->
     $.getJSON(@uri('suggest_title'), url: url)
