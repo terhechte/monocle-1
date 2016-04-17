@@ -1,10 +1,20 @@
-## Monocle
+## SwiftWatch
 
-Monocle is a link and news aggregation website.
+This repo is the source code for [SwiftWatch.net](http://swiftwatch.net)
 
-http://monocle.io
+It's based on [Monocle](http://monocle.io) [Repository](https://github.com/maccman/monocle)
 
-![Screenshot](http://maccman.github.io/monocle/screenshot.png)
+Monocle is written in Ruby+Sinatra / CoffeeScript; I don't know much about any of these (this was actually my first experience with Coffeescript) so take any of my changes with a grain of salt. They're probably awfully implemented.
+
+### Changes
+
+The following changes have been made to the Monocle codebase
+- Different Look
+- Added ability to delete own posts
+- Added ability to flag offensive posts
+- Changed how the search works
+- Fixed exceptions for invalid URLs (mostly)
+- Probably other things that I forgot about.
 
 ### Prerequisites
 
