@@ -64,6 +64,10 @@ module Brisk
         erb :spider_page
       end
 
+      get '/submission_guidelines' do
+        erb :submission
+      end
+
       get /\A((\/\Z)|\/posts)/ do
         if mobile?
           erb :mobile
