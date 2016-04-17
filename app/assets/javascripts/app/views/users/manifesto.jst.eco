@@ -1,5 +1,5 @@
 <header>
-  <h2>monocle manifesto</h2>
+  <h2>SwiftWatch</h2>
 </header>
 
 <article>
@@ -7,10 +7,7 @@
     <p>Welcome <strong><%= @user.get('name') %></strong>,</p>
   <% end %>
 
-  <p>
-    Monocle is an upbeat and positive community with a focus on technology,
-    startups and frankly anything that appeals to the inquisitive mind.
-  </p>
+  <p>SwiftWatch is an upbeat and positive community with a focus on anything that Swift developers would find interesting. That includes more than tutorials and GitHub projects. It could also included interesting iOS API news, related open source Swift developments, Swift Linux news or even tangential related Apple news (i.e. WWDC announcement). </p>
 
   <p>
     If someone has invited you to join Monocle, it means they respect your opinion

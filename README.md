@@ -60,3 +60,4 @@ From there execute:
     user.save
 
 Now you will be able to post, comment and invite users.
+
