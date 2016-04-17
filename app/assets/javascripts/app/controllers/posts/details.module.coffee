@@ -3,6 +3,7 @@ Controller  = require('controller')
 helpers     = require('app/helpers')
 State       = require('app/state')
 withUser    = State.withActiveUser
+KarmaLevel  = 20
 
 class Details extends Controller
   tag: 'header'
@@ -14,6 +15,8 @@ class Details extends Controller
 
     @post = options.post or throw new Error('post required')
     @admin = State.get('hasAdminUser')
+    @user = State.get('user')
+    @allowFlagging  = (@post.get('created') == false and @user.get('karma') > KarmaLevel) or @admin == true
 
     @on 'click', '.vote', @clickVote
     @on 'mouseover', @prerender

@@ -30,7 +30,8 @@ class Posts extends Controller
     postID = $(e.currentTarget).data('delete-post')
     return unless postID
 
-    Post.delete(postID)
+    if confirm("Do you really want to delete this post?") == true
+      Post.delete(postID)
 
   flagPost: (e) =>
     e.preventDefault()
@@ -38,7 +39,8 @@ class Posts extends Controller
     postID = $(e.currentTarget).data('flag-post')
     return unless postID
 
-    Post.flag(postID)
+    if confirm("Do you really want to report this post as offensive?") == true
+      Post.flag(postID)
 
   render: (@post) =>
     @$el.empty()

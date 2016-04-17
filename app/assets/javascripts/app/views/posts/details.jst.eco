@@ -39,9 +39,9 @@
       </a>
       <% end %>
 
-      <% if @post.get('created') == false: %>
+      <% if @allowFlagging == true: %>
       <a class="meta-point flag-action" data-flag-post="<%= @post.get('id') %>">
-          Flag Post
+          Report Post
       </a>
       <% end %>
 
