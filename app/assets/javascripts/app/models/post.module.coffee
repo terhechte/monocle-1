@@ -29,6 +29,12 @@ class Post extends Model
       b.get('created_at') - a.get('created_at')
   )
 
+  @flagged: new PaginatedCollection(
+    model: this,
+    all: (model, options = {}) ->
+      $.get(model.uri('flagged'), options.data)
+  )
+
   @search: new SearchCollection(model: this)
 
   @findBySlug: (slug) ->

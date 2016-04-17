@@ -22,6 +22,10 @@ module Brisk
           where(~:published_at => nil)
         end
 
+        def flagged
+          where{ flagged > 0 }.order(:flagged.desc)
+        end
+
         def search(query)
           query = "%#{query}%"
           ordered.where(:title.ilike(query) | :url.ilike(query))

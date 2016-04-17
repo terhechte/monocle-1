@@ -13,6 +13,7 @@ class Details extends Controller
     super
 
     @post = options.post or throw new Error('post required')
+    @admin = State.get('hasAdminUser')
 
     @on 'click', '.vote', @clickVote
     @on 'mouseover', @prerender

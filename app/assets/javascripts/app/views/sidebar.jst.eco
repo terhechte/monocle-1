@@ -23,6 +23,9 @@
 <section class="list posts-list posts-search state" data-state="search">
 </section>
 
+<section class="list posts-list posts-flagged state" data-state="flagged">
+</section>
+
 <footer>
   <% if avatar_url = @user?.get('avatar_url'): %>
     <a class="profile avatar-btn left" title="Account">

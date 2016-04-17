@@ -19,6 +19,14 @@ module Brisk
         json Post.published.paginate(params[:ignore], 30)
       end
 
+      get '/v1/posts/flagged', :auth => true do
+        if !current_user.admin?
+          return json []
+        end
+        #json Post.published.paginate(params[:ignore], 30)
+        json Post.published.flagged.paginate(params[:ignore], 300)
+      end
+
       get '/v1/posts/newest' do
         json Post.published.newest.limit(
           params[:limit] || 30,
@@ -150,7 +158,7 @@ module Brisk
         post = Post.first!(id: params[:id])
 
         # make sure we're the owning user
-        if current_user.id != post.user_id
+        if current_user.id != post.user_id and !current_user.admin?
           return "Invalid user"
         end
 

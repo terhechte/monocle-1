@@ -16,7 +16,9 @@ class UserMenu extends Controller
     @on('click', 'a[data-name=profile]', @clickProfile)
     @on('click', 'a[data-name=invite]', @clickInvite)
     @on('click', 'a[data-name=feedback]', @clickFeedback)
+    @on('click', 'a[data-name=admin]', @clickAdmin)
     @on('click', @cancel)
+    @user = @user
     @user.observe(@render)
     @render()
 
@@ -46,6 +48,11 @@ class UserMenu extends Controller
     e.preventDefault()
     @close()
     UserProfile.open(@user)
+
+  clickAdmin: (e) =>
+    e.preventDefault()
+    @close()
+    State.set(sidebar: "flagged")
 
   clickInvite: (e) =>
     e.preventDefault()

@@ -40,6 +40,7 @@ class Sidebar extends Controller
     @$postsPopular = @$('.posts-popular')
     @$postsNewest  = @$('.posts-newest')
     @$postsSearch  = @$('.posts-search')
+    @$postsFlagged = @$('.posts-flagged')
     @$searchInput  = @$('input[type=search]')
     @$nav          = @$('nav')
 
@@ -52,6 +53,11 @@ class Sidebar extends Controller
     @postsNewest = new PostList(
       el: @$postsNewest,
       collection: Post.newest
+    )
+
+    @postsFlagged = new PostList(
+      el: @$postsFlagged,
+      collection: Post.flagged
     )
 
     @postsSearch = new PostList(

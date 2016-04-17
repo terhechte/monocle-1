@@ -1,3 +1,7 @@
+<% if @user?.get('admin') == true: %>
+<li><a data-name="admin">Admin Mode</a></li>
+<% end %>
+
 <li><a data-name="profile">Profile</a></li>
 
 <!--

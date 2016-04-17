@@ -61,6 +61,7 @@ Sequel.migration do
       String :user_handle, :text=>true
       String :voted_user_ids
       String :preview_url, :text=>true
+      Integer :flagged, :default=>0
 
       primary_key [:id]
 
