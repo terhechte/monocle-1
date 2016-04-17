@@ -1,14 +1,13 @@
 <header>
-  <a class="logo landing">monocle</a>
+  <a class="logo landing"><img src="/assets/logo@2x.png"></a>
 
   <nav>
     <div class="clip">
       <div class="clipped">
         <a class="popular active" data-state="popular">Hot</a>
         <a class="newest" data-state="newest">New</a>
-        <span class="sep"></span>
-        <input type="search" tabindex="1" incremental>
       </div>
+        <input type="search" tabindex="1" incremental>
     </div>
 
     <a class="search"></a>

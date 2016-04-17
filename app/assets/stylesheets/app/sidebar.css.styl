@@ -51,29 +51,31 @@
   .logo {
     display: block
     float: left
-    color: #D32626
-    font-family: "Lily Script One", cursive, "Helvetica Neue", Helvetica, Arial, sans-serif
-    font-size: 24px
-    margin: 0 16px
+    margin: 0 10px
 
     &:hover {
       text-decoration: none
+    }
+    img {
+      margin-top: 5px;
+      width: 159px;
+      height: 40px;
     }
   }
 
   nav {
     float: right
-    height: 14px
-    line-height: 14px
-    margin: 19px 16px
+    height: 32px
+    line-height: 32px
+    margin: 10px 12px
 
     .clip {
       float: left
-      width: 100px
+      width: 115px
     }
 
     .clipped {
-      width: 207px
+      width: 140px
       float: left
       transition: -webkit-transform 200ms ease
       transition: -moz-transform 200ms ease
@@ -94,42 +96,43 @@
       padding-left: 15px
       background-repeat: no-repeat
       text-decoration: none
-      font-weight: bold
+      font-weight: 300
       font-size: 12px
       color: #9EB1BD
       user-select: none
     }
 
     a.popular {
-      background-image2x: '/assets/popular-icon.png'
-      background-size: 10px 12px
-      background-position: 0 0px
+      background-image2x: '/assets/popular-icon2.png'
+      background-size: 31px 32px;
+      background-position: 0px 0px;
+      padding-left: 35px
 
       &:active, &.active {
-        background-image2x: '/assets/popular-icon-active.png'
+        background-image2x: '/assets/popular-icon.png'
         color: #D32626
       }
     }
 
     a.newest {
-      background-image2x: '/assets/newest-icon.png'
-      background-size: 11px 12px
-      background-position: 0 1px
+      background-image2x: '/assets/newest-icon2.png'
+      background-size: 31px 32px;
+      background-position: 0px 0px;
+      padding-left: 35px
 
       &:active, &.active {
-        background-image2x: '/assets/newest-icon-active.png'
-        color: #D32626
+        background-image2x: '/assets/newest-icon.png'
+        color: #4A90E2
       }
     }
 
     a.search {
-      width: 14px
-      height: 15px
-      padding: 0 0 0 5px
+      width: 30px
+      height: 30px
       margin: 0
       background-position: right 0px
       background-repeat: no-repeat
-      background-image2x: '/assets/search-icon.png' 14px 14px
+      background-image2x: '/assets/search-icon.png' 30px 30px
     }
 
     .sep {
@@ -145,25 +148,27 @@
 
     input {
       display: none
-      appearance: none
-      border: none
       background: transparent
       padding: 0
       margin: 0
       outline: none
       box-sizing: border-box
-      height: 14px
-      line-height: 14px
-      width: 100px
+      height: 20px
+      line-height: 20px
+      width: 120px
     }
 
     &.search-active {
+      a.search {
+        background-image2x: '/assets/search-icon-exit.png' 30px 30px
+      }
       .clipped {
-        transform: translate3d(-100px, 0, 0)
+        transform: translate3d(-115px, 0, 0)
+        display: none
       }
 
       input {
-        display: block
+        display: inline
       }
     }
   }

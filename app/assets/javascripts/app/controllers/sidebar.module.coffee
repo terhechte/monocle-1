@@ -109,6 +109,7 @@ class Sidebar extends Controller
       @$searchInput.select()
     else
       @$searchInput.val('').trigger('search')
+      @setState()
 
   search: (e) =>
     val = @$searchInput.val()

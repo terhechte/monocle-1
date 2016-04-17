@@ -30,18 +30,21 @@
       </a>
     </span>
 
-    <% if @post.get('created') == true: %>
-      <a data-delete-post="<%= @post.get('id') %>">
-        Delete Post
-      </a>
-    <% end %>
+  </div>
 
-      <a data-flag-post="<%= @post.get('id') %>">
-        Flag Post
+  <div class="actions">
+      <% if @post.get('created') == true: %>
+      <a class="meta-point delete-action" data-delete-post="<%= @post.get('id') %>">
+          Delete Post
+      </a>
+      <% end %>
+
+      <a class="meta-point flag-action" data-flag-post="<%= @post.get('id') %>">
+          Flag Post
       </a>
 
       <% if @post.get('flagged') > 0: %>
-      (Flagged)
+      <span class="meta-point flagged">(Flagged)</span>
       <% end %>
 
   </div>

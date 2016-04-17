@@ -25,6 +25,20 @@
     cursor: pointer
   }
 
+  .actions {
+    .flagged {
+      padding: 2px
+      color: white;
+      background-color: red;
+    }
+    .flag-action {
+      color: #D32626
+    }
+    .delete-action {
+      color: #D32626
+    }
+  }
+
   .meta-point {
     font-size: 12px
     color: #A1A8B2
@@ -34,7 +48,7 @@
     }
 
     &:after {
-      content: ' . '
+      content: ' | '
       font-size: 13px
       color: #77808C
       line-height: 1.7em
@@ -80,6 +94,7 @@
     }
 
     .title {
+      font-weight: 500
       line-height: 28px
       margin-bottom: 4px
     }
