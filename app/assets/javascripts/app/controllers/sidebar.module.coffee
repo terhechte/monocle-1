@@ -24,6 +24,7 @@ class Sidebar extends Controller
     @on('click', '.profile', @profile)
     @on('click', '.newPost', @newPost)
     @on('click', '.landing', @landing)
+    @on('click', '.about', @landing)
     @on('search focus', 'input[type=search]', @search)
     $(window).on('keydown', @keydown)
 

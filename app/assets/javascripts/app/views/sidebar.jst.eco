@@ -33,6 +33,6 @@
     <a class="config profile btn left" title="Account"></a>
   <% end %>
 
-  <span></span>
   <a class="add btn newPost right" title="New post"></a>
+  <a href="" class="about right">About</a>
 </footer>

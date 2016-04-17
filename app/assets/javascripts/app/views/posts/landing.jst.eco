@@ -4,6 +4,22 @@
 
 <div class="wrapper">
   <article class="splash">
-    <h1>SwiftWatch</h1>
+      <h3>Welcome</h3>
+      <p>SwiftWatch is a place to share links to interesting Swift resources like tutorials, blog posts, GitHub projects or more.</p>
+      <p>You need a <a hre="https://github.com">GitHub</a> or <a href="https://twitter.com">Twitter</a> account to sign up, post links, and comment. Please consult the submission guidelines if you're unsure whether your content would fit.</p>
+
+
+      <h3>Here's a list of additional Swift resources:</h3>
+      <ul>
+          <li><a href="https://github.com/trending/swift">GitHub trending Swift projects</a></li>
+          <li><a href="https://github.com/trending/developers/swift">GitHub trending Swift develoeprs</a></li>
+          <li><a href="https://twitter.com/search?f=tweets&vertical=default&q=%23swiftlang&src=typd">Twitter #swiftlang</a></li>
+          <li><a href="https://twitter.com/SwiftSandbox">Swift Open Source</a></li>
+          <li><a href="https://twitter.com/swiftlybrief">Swift Weekly Brief</a></li>
+          <li><a href="https://twitter.com/swift_weekly">Swift Weekly</a></li>
+      </ul>
+
+      For feedback, contact me via Twitter at <a href="https://twitter.com/terhechte">@terhechte</a>
+
   </article>
 </div>
