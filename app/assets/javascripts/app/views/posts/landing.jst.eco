@@ -9,6 +9,10 @@
       <p>You need a <a hre="https://github.com">GitHub</a> or <a href="https://twitter.com">Twitter</a> account to sign up, post links, and comment. Please consult the submission guidelines if you're unsure whether your content would fit.</p>
 
 
+      <h3>Keybindings</h3>
+      <p>In the left sidebar, you can use "j" / down arrow or "k" / up arrow to navigate the list of new posts.</p>
+
+
       <h3>Here's a list of additional Swift resources:</h3>
       <ul>
           <li><a href="https://github.com/trending/swift">GitHub trending Swift projects</a></li>
