@@ -12,5 +12,9 @@
     <div class="item tappable">
       <a class="next">More…</a>
     </div>
+
+    <div class="item tappable">
+        <a class="desktop">Desktop Site…</a>
+    </div>
   </section>
 </div>

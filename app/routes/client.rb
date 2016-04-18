@@ -3,6 +3,9 @@ module Brisk
     class Client < Base
       helpers do
         def ios?
+          if session['forceDesktop'] == true
+            return false
+          end
           request.user_agent =~ /iPhone|iPod/
         end
 
@@ -62,6 +65,16 @@ module Brisk
       get '/posts/:slug', :spider => true do
         @post = Post.first!(slug: params[:slug])
         erb :spider_page
+      end
+
+      get '/force_desktop' do
+        session['forceDesktop'] = true
+        redirect "/"
+      end
+
+      get '/unforce_desktop' do
+        session['forceDesktop'] = false
+        redirect "/"
       end
 
       get '/submission_guidelines' do

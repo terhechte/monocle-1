@@ -44,6 +44,10 @@ crop = (url, width, height) ->
   url = url.replace(/^https?:\/\//, '')
   "//assets.example.com/crop/#{width}x#{height}/#{url}"
 
+isMobile = () ->
+  /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent)
+
+
 createFragment = (value, element = document.createElement('div')) ->
   return value if value instanceof DocumentFragment
   range = document.createRange()
@@ -57,3 +61,4 @@ module.exports =
   truncate: truncate
   pluralize: pluralize
   crop: crop
+  isMobile: isMobile

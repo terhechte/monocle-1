@@ -19,6 +19,7 @@ class Posts extends Controller
     @on 'tap', 'a[href]', @tap
     @on 'tap', 'a.more', @tapMore
     @on 'tap', 'a.next', @tapNext
+    @on 'tap', 'a.desktop', @tapDesktop
     @on 'tap', '.item', @highlight
 
     @render()
@@ -64,6 +65,10 @@ class Posts extends Controller
 
   tapNext: (e) =>
     Post.popular.next()
+
+  tapDesktop: (e) =>
+    e.preventDefault()
+    document.location.href = "/force_desktop"
 
   highlight: (e) =>
     $item = $(e.currentTarget)
