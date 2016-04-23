@@ -40,6 +40,8 @@
   <% if @helpers.isMobile(): %>
     <a href="/unforce_desktop" class="right">Back to Mobile </a>
   <% else: %>
+    <!--
     <a href="" class="about right">About</a>
+    -->
   <% end %>
 </footer>
