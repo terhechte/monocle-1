@@ -15,7 +15,7 @@ class CommentItem extends Controller
     @comment = options.comment or throw new Error('comment required')
     @comment.observe(@render)
 
-    @on 'click', '> .meta .vote', @clickVote
+    @on 'click', '.commentvote', @clickVote
     @on 'click', '> .meta .reply', @clickReply
     @on 'click', '> .meta .edit', @clickEdit
     @on 'action', '> .action', @removeStates

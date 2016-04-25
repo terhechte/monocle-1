@@ -1,11 +1,17 @@
 <a class="avatar">
-  <img src="<%= @comment.get('avatar_url') %>">
+    <img src="<%= @comment.get('avatar_url') %>">
+    <% if @comment.get('voted'): %>
+    <img class="voted" src="/assets/up-icon@2x.png" width="22" height="22">
+    <% else: %>
+    <img class="commentvote" src="/assets/up-icon-active@2x.png" width="22" height="22">
+    <% end %>
 </a>
 
 <div class="meta">
-  <span class="meta-point votes vote <% if @comment.get('voted'): %>voted<% end %>">
-    <%= @comment.get('votes') %>
-  </span>
+
+    <span class="meta-point user">
+        <%= @comment.get('votes') %> Points
+    </span>
 
   <span class="meta-point user">
     <a data-user-id="<%= @comment.get('user_id') %>">

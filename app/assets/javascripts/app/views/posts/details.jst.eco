@@ -6,12 +6,14 @@
 
 <section>
   <h1 class="title">
+    <span class="votes vote <% if @post.get('voted'): %>voted<% end %>"> </span>
     <a href="<%= @post.get('url') %>"><%= @post.get('title') %></a>
   </h1>
 
   <div class="meta">
-    <span class="meta-point votes vote <% if @post.get('voted'): %>voted<% end %>">
-      <%= @post.get('votes') %>
+
+    <span class="meta-point votes">
+      <%= @post.get('votes') %> Points
     </span>
 
     <span class="meta-point domain">
@@ -21,7 +23,7 @@
     </span>
 
     <time class="meta-point discuss" title="<%= @post.get('created_at') %>">
-      <%= @post.ago() %>
+      <%= @post.ago() %> ago
     </time>
 
     <span class="meta-point user-handle">

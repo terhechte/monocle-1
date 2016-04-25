@@ -1,8 +1,5 @@
-<% if @index?: %>
-  <section class="index">
-    <%= @index + 1 %>.
-  </section>
-<% end %>
+<span class="meta-point votes vote <% if @post.get('voted'): %>voted<% end %>">
+</span>
 
 <section>
   <h5 class="title <% if @post.get('visited'): %>visited<% end %>">
@@ -12,8 +9,8 @@
   </h5>
 
   <div class="meta">
-    <span class="meta-point votes vote <% if @post.get('voted'): %>voted<% end %>">
-      <%= @post.get('votes') %>
+    <span class="meta-point user-handle">
+      <%= @post.get('votes') %> Points 
     </span>
 
     <span class="meta-point domain">
