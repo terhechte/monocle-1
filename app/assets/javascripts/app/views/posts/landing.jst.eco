@@ -12,6 +12,8 @@
       <h3>Keybindings</h3>
       <p>In the left sidebar, you can use "j" / down arrow or "k" / up arrow to navigate the list of new posts.</p>
 
+      <h3>Markdown Comments</h3>
+      <p>When you write comments, there is Markdown support, particularly fenced code blocks are supported (```let p = k()```)</p>
 
       <h3>Here's a list of additional Swift resources:</h3>
       <ul>
