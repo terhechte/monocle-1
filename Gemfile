@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'sinatra', '1.4.3', :require => 'sinatra/base'
+#gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
+gem 'sinatra', '1.4.6', :require => 'sinatra/base'
 gem 'unicorn', '4.6.3'
 gem 'erubis'
 gem 'builder'
