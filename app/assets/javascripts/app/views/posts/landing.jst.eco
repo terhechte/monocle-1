@@ -2,8 +2,11 @@
   <a href="/feed" class="feed" title="RSS feed"></a>
 </nav>
 
-<div class="wrapper">
-  <article class="splash">
+<!-- quick fix for yosemite's safari -->
+<div class="wrapper" align="center">
+  <article class="splash" align="left">
+<br/>
+<br/>
       <h3>Welcome</h3>
       <p><strong>SwiftWatch</strong> is a place to share links to interesting Swift resources like tutorials, blog posts, GitHub projects or more.</p>
       <p>You need a <a hre="https://github.com">GitHub</a> or <a href="https://twitter.com">Twitter</a> account to sign up, post links, and comment. Please consult the submission guidelines if you're unsure whether your content would fit.</p>
