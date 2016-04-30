@@ -1,5 +1,5 @@
 <% if @post.get('icon'): %>
-  <a class="icon" href="<%= @post.get('url') %>">
+  <a target="_blank" class="icon" href="<%= @post.get('url') %>">
     <img src="<%= @post.get('icon') %>">
   </a>
 <% end %>
@@ -7,7 +7,7 @@
 <section>
   <h1 class="title">
     <span class="votes vote <% if @post.get('voted'): %>voted<% end %>"> </span>
-    <a href="<%= @post.get('url') %>"><%= @post.get('title') %></a>
+    <a target="_blank" href="<%= @post.get('url') %>"><%= @post.get('title') %></a>
   </h1>
 
   <div class="meta">
@@ -17,7 +17,7 @@
     </span>
 
     <span class="meta-point domain">
-      <a href="<%= @post.get('url') %>">
+      <a target="_blank" href="<%= @post.get('url') %>">
         <%= @post.get('domain') %>
       </a>
     </span>
